@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-   <title>Casa Sergio &mdash; Colorlib Website Template</title>
+<head>
+   <title>Casa Sergio &mdash; Hamburg Booking</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -17,12 +18,65 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
     <link rel="stylesheet" href="css/fl-bigmug-line.css">
-    
-  
     <link rel="stylesheet" href="css/aos.css">
-
     <link rel="stylesheet" href="css/style.css">
     
+    <style>
+      .apartment-buttons {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        gap: 20px;
+        z-index: 10;
+      }
+      
+      .apartment-btn {
+        padding: 15px 40px;
+        font-size: 18px;
+        font-weight: 700;
+        border: 3px solid white;
+        background: rgba(255, 255, 255, 0.1);
+        color: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        backdrop-filter: blur(5px);
+      }
+      
+      .apartment-btn:hover {
+        background: rgba(255, 255, 255, 0.9);
+        color: #333;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      }
+
+      .booking-section h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 36px;
+        font-weight: 700;
+      }
+
+      
+      
+      @media (max-width: 768px) {
+        .apartment-buttons {
+          flex-direction: column;
+          gap: 10px;
+          bottom: 30px;
+        }
+        
+        .apartment-btn {
+          padding: 12px 30px;
+          font-size: 16px;
+
+        }
+       
+      }
+    </style>
   </head>
   <body>
   
@@ -37,7 +91,7 @@
         </div>
       </div>
       <div class="site-mobile-menu-body"></div>
-    </div> <!-- .site-mobile-menu -->
+    </div>
 
     <div class="site-navbar mt-4">
         <div class="container py-1">
@@ -92,19 +146,13 @@
                 </ul>
               </nav>
             </div>
-           
-
           </div>
         </div>
       </div>
     </div>
- 
 
     <div class="slide-one-item home-slider owl-carousel">
-
-      
-
-      <div class="site-blocks-cover overlay" style="background-image: url(https://www.hochtief.de/fileadmin/user_upload/we-build/hamburg/hamburg-elbphilharmonie-half-02.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
+      <div class="site-blocks-cover overlay" style="background-image: url(https://www.hochtief.de/fileadmin/user_upload/we-build/hamburg/hamburg-elbphilharmonie-half-02.jpg); position: relative;" data-aos="fade" data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
@@ -113,25 +161,60 @@
             </div>
           </div>
         </div>
+        
+        <!-- Apartment Buttons -->
+        <div class="apartment-buttons">
+          <button class="apartment-btn" onclick="scrollToApartment('bianca')">Bianca</button>
+          <button class="apartment-btn" onclick="scrollToApartment('maronne')">Maronne</button>
+        </div>
       </div>  
     </div>
 
+    <div>
+      <br>
+      <br>
+      <br>
+    </div>
 
     
-
-    <div class="site-section site-section-sm bg-light">
-
-        <div id="widget-buchung-424475" data-verify="0df78728daed981ff3d70361c690c6519ab5fec54a51c4f910167cdb058cd0ab">
-        <script src="https://www.multikalender.de/home/scripts/widget-buchung.js"></script>
-        <script>WidgetBuchungIframe.setup({"url": "https://www.multikalender.de/home/iframe/buchung/424475", "domain": "https://www.multikalender.de", "target": "#widget-buchung-424475"})</script></div>
-      
-  
-</div>
+    <div id="bianca" class = "booking-section">
+    <h2>Apartment Bianca</h2> 
+    <div id="smoobuApartment2996961de" class="calendarWidget"> <div class="calendarContent" data-load-calendar-url="https://login.smoobu.com/de/cockpit/widget/single-calendar/2996961" data-verification="12d61be2036c866591da31fa6fd84ddf8271fbae33eaeae73b7efd428e3dd4fc" data-baseUrl="https://login.smoobu.com" data-disable-css="false" ></div> <script type="text/javascript" src="https://login.smoobu.com/js/Apartment/CalendarWidget.js"></script></div>
 
     
     </div>
   </div>
 </div>
+
+
+
+
+<div id="apartmentIframe2996961">
+<script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
+<script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/de/booking-tool/iframe/1493391/2996961", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframe2996961"})</script>
+</div>
+
+
+<div id="maronne" class = "booking-section">
+<h2>Apartment Maronne</h2> 
+  
+<div id="smoobuApartment2996966de" class="calendarWidget"> <div class="calendarContent" data-load-calendar-url="https://login.smoobu.com/de/cockpit/widget/single-calendar/2996966" data-verification="463ad3a160d6973184b2d9b892131136a12d100b6624bbdc1c426fa5516a3f0a" data-baseUrl="https://login.smoobu.com" data-disable-css="false" ></div> <script type="text/javascript" src="https://login.smoobu.com/js/Apartment/CalendarWidget.js"></script></div>
+
+
+
+<div id="apartmentIframe2996966">
+<script type="text/javascript" src="https://login.smoobu.com/js/Settings/BookingToolIframe.js"></script>
+<script>BookingToolIframe.initialize({"url": "https://login.smoobu.com/de/booking-tool/iframe/1493391/2996966", "baseUrl": "https://login.smoobu.com", "target": "#apartmentIframe2996966"})</script>
+</div>
+</div>
+
+
+
+
+
+
+
+
 
     
 
@@ -147,14 +230,6 @@
             <div class="mb-5">
               <h3 class="footer-heading mb-4">About Casa Sergio</h3>
               <p>We are a dedicated company specializing in the rental of high-quality holiday homes and exclusive accommodations. Our goal is to offer our guests unforgettable vacation experiences — with comfort, style, and personalized service.</p>
-
-
-
-
-
-
-
-
             </div>
 
             
@@ -220,8 +295,23 @@
   <script src="js/jquery.magnific-popup.min.js"></script>
   <script src="js/bootstrap-datepicker.min.js"></script>
   <script src="js/aos.js"></script>
-
   <script src="js/main.js"></script>
+  
+  <script>
+    function scrollToApartment(apartment) {
+      const element = document.getElementById(apartment);
+      if (element) {
+        const offset = 100;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+  </script>
     
   </body>
 </html>
